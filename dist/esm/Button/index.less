@@ -1,121 +1,188 @@
-@import url('../global.less');
-// 按钮公共样式
-.x-btn {
+@import '../_style/index.less';
+
+@btn-prefix-cls: ~'@{cls-prefix}-btn';
+
+@size: ~'size';
+@type: ~'type';
+@variant: ~'variant';
+@block: ~'block';
+@shape: ~'shape';
+
+.@{btn-prefix-cls}{
   box-sizing: border-box;
-  color: @whiteColor;
-  border: none;
-  border-radius: 5px;
+  border:1px solid @borderColor;
+  background: @whiteColor;
+  color: @fontColor;
   cursor: pointer;
-}
-// 按钮背景色
-.x-btn-type-default {
-  button {
-    color: @fontColor;
-    background-color: @whiteColor;
-    border: 1px solid @borderColor;
+  border-radius: 5px;
+  &:hover{
+    opacity: .7;
   }
-  .x-is-disabled {
-    color: @infoColorLight6;
-  }
-}
-.x-btn-type-primary {
-  button {
-    background-color: @primaryColor;
-    &:hover {
-      background-color: @primaryColorLight6;
+  &[disabled]{
+    cursor: not-allowed;
+    opacity: .6;
+    &:hover{
+      opacity: .6;
     }
   }
-  .x-btn-variant-outline {
-    background-color: white;
-    border: 1px solid @primaryColor;
-    span {
-      color: @primaryColor;
-    }
-    &:hover {
-      span {
-        color: @primaryColorLight6;
+  &-@{block}{
+    width: 100%;
+  }
+  &-@{type}{
+    &-default{
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          border-style: dashed;
+        }
+        &-text{
+          border: none;
+        }
       }
-      background-color: @whiteColor;
-      border: 1px solid @primaryColorLight6;
+    }
+    &-primary{
+      border-color: @primaryColor;
+      background-color: @primaryColor;
+      color: @whiteColor;
+      &[disabled]{
+        border-color: @blue-5;
+        background-color: @blue-5;
+      }
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          border-color: @primaryColor;
+          border-style: dashed;
+          color: @primaryColor;
+          background-color: @whiteColor;
+        }
+        &-outline{
+          border-color: @primaryColor;
+          color: @primaryColor;
+          background-color: @whiteColor;
+        }
+        &-text{
+          color: @primaryColor;
+          background-color: @whiteColor;
+          border: none;
+        }
+      }
+    }
+    &-success{
+      border-color: @successColor;
+      background-color: @successColor;
+      color: @whiteColor;
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          background-color: @whiteColor;
+          color: @successColor;
+          border-color: @successColor;
+          border-style: dashed;
+        }
+        &-outline{
+          background-color: @whiteColor;
+          color: @successColor;
+          border-color: @successColor;
+        }
+        &-text{
+          background-color: @whiteColor;
+          color: @successColor;
+          border: none;
+        }
+      }
+    }
+    &-danger{
+      border-color: @dangerColor;
+      background-color: @dangerColor;
+      color: @whiteColor;
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          background-color: @whiteColor;
+          color: @dangerColor;
+          border-color: @dangerColor;
+          border-style: dashed;
+        }
+        &-outline{
+          background-color: @whiteColor;
+          color: @dangerColor;
+          border-color: @dangerColor;
+        }
+        &-text{
+          background-color: @whiteColor;
+          color: @dangerColor;
+          border: none;
+        }
+      }
+    }
+    &-warning{
+      border-color: @warningColor;
+      background-color: @warningColor;
+      color: @whiteColor;
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          background-color: @whiteColor;
+          color: @warningColor;
+          border-color: @warningColor;
+          border-style: dashed;
+        }
+        &-outline{
+          background-color: @whiteColor;
+          color: @warningColor;
+          border-color: @warningColor;
+        }
+        &-text{
+          background-color: @whiteColor;
+          color: @warningColor;
+          border: none;
+        }
+      }
+    }
+    &-info{
+      border-color: @infoColor;
+      background-color: @infoColor;
+      color: @whiteColor;
+      &.@{btn-prefix-cls}-@{variant}{
+        &-dashed{
+          background-color: @whiteColor;
+          color: @infoColor;
+          border-color: @infoColor;
+          border-style: dashed;
+        }
+        &-outline{
+          background-color: @whiteColor;
+          color: @infoColor;
+          border-color: @infoColor;
+        }
+        &-text{
+          background-color: @whiteColor;
+          color: @infoColor;
+          border: none;
+        }
+      }
     }
   }
-  button.x-is-disabled {
-    background-color: @primaryColorLight3;
+  &-@{size}{
+    &-mini{
+      height: 22px;
+      padding: 0 4px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+    &-small{
+      height: 24px;
+      padding: 0 7px;
+      font-size: 12px;
+      line-height: 24px;
+    }
+    &-middle{
+      height: 32px;
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 32px;
+    }
+    &-large{
+      height: 40px;
+      padding: 0 19px;
+      font-size: 16px;
+      line-height: 40px;
+    }
   }
-}
-.x-btn-type-success {
-  button {
-    background-color: @successColor;
-  }
-  .x-is-disabled {
-    background-color: @successColorLight3;
-  }
-}
-.x-btn-type-danger {
-  button {
-    background-color: @dangerColor;
-  }
-  .x-is-disabled {
-    background-color: @dangerColorLight3;
-  }
-}
-.x-btn-type-warning {
-  button {
-    background-color: @warningColor;
-  }
-  .x-is-disabled {
-    background-color: @warningColorLight3;
-  }
-}
-.x-btn-type-info {
-  button {
-    background-color: @infoColor;
-  }
-  .x-is-disabled {
-    background-color: @infoColorLight6;
-  }
-}
-// 按钮大小
-.x-btn-size-large {
-  height: 40px;
-  padding: 0 19px;
-  font-size: 16px;
-  line-height: 40px;
-}
-.x-btn-size-middle {
-  height: 32px;
-  padding: 0 15px;
-  font-size: 14px;
-  line-height: 32px;
-}
-.x-btn-size-small {
-  height: 24px;
-  padding: 0 7px;
-  font-size: 12px;
-  line-height: 24px;
-}
-.x-btn-size-mini {
-  height: 22px;
-  padding: 0 4px;
-  font-size: 12px;
-  line-height: 22px;
-}
-// 禁用状态
-.x-is-disabled {
-  cursor: not-allowed;
-}
-// block
-.x-btn-block {
-  width: 100%;
-}
-// variant
-.x-btn-variant-base {
-}
-.x-btn-variant-dashed {
-  background-color: white;
-  border: 1px dashed @borderColor;
-}
-.x-btn-variant-text {
-  background-color: white;
-  border: none;
 }

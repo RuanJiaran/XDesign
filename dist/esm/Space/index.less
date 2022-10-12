@@ -1,13 +1,15 @@
-@import url('../global.less');
+@import '../_style/index.less';
 
-.x-space {
+@space-prefix-cls: ~'@{cls-prefix}-space';
+
+.@{space-prefix-cls} {
   display: inline-flex;
   flex-wrap: wrap;
 }
-.x-space-direction-vertical {
+.@{space-prefix-cls}-direction-vertical {
   flex-direction: column;
 }
 
-.x-space-direction-horizontal {
+.@{space-prefix-cls}-direction-horizontal {
   flex-direction: row;
 }

@@ -6,15 +6,16 @@ export default defineConfig({
   favicon:
     'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  base: '/XDesign',
+  publicPath: '/XDesign/',
   outputPath: 'docs-dist',
   mode: 'site',
-  // more config: https://d.umijs.org/config
   resolve: {
     includes: ['docs', 'src'],
   },
   theme: {
     // 配置 less 变量
-    '@theme': 'default', // 主题样式
+    // '@theme': 'default', // 主题样式
     '@cls-prefix': clsPrefix, // 所有组件样式前缀
   },
   apiParser: {},

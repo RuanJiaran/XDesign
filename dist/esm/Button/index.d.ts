@@ -25,20 +25,16 @@ export declare type IProps = {
      * @description 按钮形状，长方形（rectangle）、圆角长方形（round）、圆形（circle）
      * @default     rectangle
      */
-    shape?: 'rectangle' | 'round' | 'circle';
     /**
      * @description 是否为块级元素
-     * @default
      */
     block?: boolean;
     /**
      * @description 禁用状态
-     * @default
      */
     disabled?: boolean;
     /**
      * @description 是否显示为加载状态
-     * @default
      */
     loading?: boolean;
     /**
@@ -47,19 +43,20 @@ export declare type IProps = {
     icon?: string;
     /**
      * @description 按钮内容
-     * @default
      */
     content?: React.ReactNode;
     /**
      * @description 按钮内容，同 content
-     * @default
      */
     children?: React.ReactNode;
     /**
-     * @description 点击事件，点击时触发
-     * @default
+     * @description 类名
      */
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    className?: string;
+    /**
+     * @description 点击事件，点击时触发
+     */
+    onClick?: (e: React.MouseEvent) => void;
 };
 declare const Button: React.FC<IProps>;
 export default Button;
