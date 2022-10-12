@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 import './index.less';
+import { clsPrefix } from '../_config';
+
+const classPrefix = `${clsPrefix}-space`;
 
 type IProps = {
   /**
@@ -17,25 +21,29 @@ type IProps = {
    */
   style?: React.CSSProperties;
   /**
+   * @description 类名
+   */
+  className?: string;
+  /**
    * @description 内容
-   * @default
    */
   children?: React.ReactNode;
 };
 
-const initProps: IProps = {
-  size: 8,
-  direction: 'horizontal',
-};
-
 const Button: React.FC<IProps> = (props) => {
-  props = { ...initProps, ...props };
+  const { size = 8, direction = 'horizontal', className, children, style } = props;
 
-  let className = `x-space x-space-direction-${props.direction}`;
+  const spaceClsNames = classNames(
+    classPrefix,
+    {
+      [`${classPrefix}-direction-${direction}`]: true,
+    },
+    className,
+  );
 
   return (
-    <div className={className} style={{ gap: props.size, ...props.style }}>
-      {props.children}
+    <div className={spaceClsNames} style={{ gap: size, ...style }}>
+      {children}
     </div>
   );
 };

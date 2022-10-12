@@ -3,7 +3,6 @@ title: Space 间距
 nav:
   path: /components
   title: Space 间距
-  order: 2
 ---
 
 ## Space 间距

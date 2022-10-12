@@ -13,11 +13,11 @@ export default defineConfig({
   resolve: {
     includes: ['docs', 'src'],
   },
-  theme: {
-    // 配置 less 变量
-    // '@theme': 'default', // 主题样式
-    '@cls-prefix': clsPrefix, // 所有组件样式前缀
-  },
+  // theme: {
+  //   // 配置 less 变量
+  //   // '@theme': 'default', // 主题样式
+  //   // '@cls-prefix': clsPrefix, // 所有组件样式前缀
+  // },
   apiParser: {},
   navs: [
     // null, // null 值代表保留约定式生成的导航，只做增量配置

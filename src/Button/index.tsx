@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import './index.less';
 import { clsPrefix } from '../_config';
 
+const classPrefix = `${clsPrefix}-btn`;
+
 export type IProps = {
   /**
    * @description 颜色类型，默认（default）、主色（primary）、浅灰（info）、红色（danger）、黄色（warning）、绿色（success）
@@ -58,6 +60,10 @@ export type IProps = {
    */
   className?: string;
   /**
+   * @description 样式
+   */
+  style?: React.CSSProperties;
+  /**
    * @description 点击事件，点击时触发
    */
   onClick?: (e: React.MouseEvent) => void;
@@ -73,25 +79,32 @@ const Button: React.FC<IProps> = (props) => {
     disabled,
     block,
     className,
+    style,
     content,
     children,
     onClick,
   } = props;
 
   const btnClasses = classNames(
-    `${clsPrefix}-btn`,
+    classPrefix,
     {
-      [`${clsPrefix}-btn-type-${type}`]: type,
-      [`${clsPrefix}-btn-size-${size}`]: size,
-      [`${clsPrefix}-btn-variant-${variant}`]: variant,
-      [`${clsPrefix}-btn-block`]: block,
+      [`${classPrefix}-type-${type}`]: true,
+      [`${classPrefix}-size-${size}`]: true,
+      [`${classPrefix}-variant-${variant}`]: variant,
+      [`${classPrefix}-block`]: block,
       // [`${clsPrefix}-btn-shape`]: shape,
     },
     className,
   );
 
   return (
-    <button className={btnClasses} type={nativeType} disabled={disabled} onClick={onClick}>
+    <button
+      className={btnClasses}
+      type={nativeType}
+      disabled={disabled}
+      onClick={onClick}
+      style={style}
+    >
       <span>{children || content}</span>
     </button>
   );

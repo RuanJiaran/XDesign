@@ -10,7 +10,7 @@ features:
     title: 更小的体积
     desc: 组件体积更小，灵活使用，按需使用。
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d60657df-0822-4631-9d7c-e7a869c2f21c/k79dmz3q_w126_h126.png
-    title: 更快的响应
+    title: 更快的开发
     desc: 极少的代码量，极简配置项。
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 更完美的支持
