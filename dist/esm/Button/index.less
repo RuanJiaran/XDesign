@@ -1,0 +1,121 @@
+@import url('../global.less');
+// 按钮公共样式
+.x-btn {
+  box-sizing: border-box;
+  color: @whiteColor;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+// 按钮背景色
+.x-btn-type-default {
+  button {
+    color: @fontColor;
+    background-color: @whiteColor;
+    border: 1px solid @borderColor;
+  }
+  .x-is-disabled {
+    color: @infoColorLight6;
+  }
+}
+.x-btn-type-primary {
+  button {
+    background-color: @primaryColor;
+    &:hover {
+      background-color: @primaryColorLight6;
+    }
+  }
+  .x-btn-variant-outline {
+    background-color: white;
+    border: 1px solid @primaryColor;
+    span {
+      color: @primaryColor;
+    }
+    &:hover {
+      span {
+        color: @primaryColorLight6;
+      }
+      background-color: @whiteColor;
+      border: 1px solid @primaryColorLight6;
+    }
+  }
+  button.x-is-disabled {
+    background-color: @primaryColorLight3;
+  }
+}
+.x-btn-type-success {
+  button {
+    background-color: @successColor;
+  }
+  .x-is-disabled {
+    background-color: @successColorLight3;
+  }
+}
+.x-btn-type-danger {
+  button {
+    background-color: @dangerColor;
+  }
+  .x-is-disabled {
+    background-color: @dangerColorLight3;
+  }
+}
+.x-btn-type-warning {
+  button {
+    background-color: @warningColor;
+  }
+  .x-is-disabled {
+    background-color: @warningColorLight3;
+  }
+}
+.x-btn-type-info {
+  button {
+    background-color: @infoColor;
+  }
+  .x-is-disabled {
+    background-color: @infoColorLight6;
+  }
+}
+// 按钮大小
+.x-btn-size-large {
+  height: 40px;
+  padding: 0 19px;
+  font-size: 16px;
+  line-height: 40px;
+}
+.x-btn-size-middle {
+  height: 32px;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 32px;
+}
+.x-btn-size-small {
+  height: 24px;
+  padding: 0 7px;
+  font-size: 12px;
+  line-height: 24px;
+}
+.x-btn-size-mini {
+  height: 22px;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 22px;
+}
+// 禁用状态
+.x-is-disabled {
+  cursor: not-allowed;
+}
+// block
+.x-btn-block {
+  width: 100%;
+}
+// variant
+.x-btn-variant-base {
+}
+.x-btn-variant-dashed {
+  background-color: white;
+  border: 1px dashed @borderColor;
+}
+.x-btn-variant-text {
+  background-color: white;
+  border: none;
+}
