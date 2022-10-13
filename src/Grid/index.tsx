@@ -1,3 +1,4 @@
-import React from 'react';
+import Row from './Row';
+import Col from './Col';
 
-export default ({ title }: { title: string }) => <h1>{title}</h1>;
+export { Row, Col };

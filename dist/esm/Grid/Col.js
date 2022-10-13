@@ -6,27 +6,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 import React from 'react';
 import classNames from 'classnames';
-import "./index.less";
 import { clsPrefix } from "../_config";
+import "./index.less";
 import { jsx as _jsx } from "react/jsx-runtime";
-var classPrefix = "".concat(clsPrefix, "-space");
+var classPrefix = "".concat(clsPrefix, "-col");
 
-var Button = function Button(props) {
-  var _props$size = props.size,
-      size = _props$size === void 0 ? 8 : _props$size,
-      _props$direction = props.direction,
-      direction = _props$direction === void 0 ? 'horizontal' : _props$direction,
-      className = props.className,
+var Col = function Col(props) {
+  var _classNames;
+
+  var _props$span = props.span,
+      span = _props$span === void 0 ? 24 : _props$span,
+      offset = props.offset,
       children = props.children,
       style = props.style;
-  var spaceClsNames = classNames(classPrefix, _defineProperty({}, "".concat(classPrefix, "-direction-").concat(direction), true), className);
+  var classes = classNames(classPrefix, (_classNames = {}, _defineProperty(_classNames, "".concat(classPrefix, "-span-").concat(span), true), _defineProperty(_classNames, "".concat(classPrefix, "-offset-").concat(offset), offset), _classNames));
   return /*#__PURE__*/_jsx("div", {
-    className: spaceClsNames,
-    style: _objectSpread({
-      gap: size
-    }, style),
+    className: classes,
+    style: _objectSpread(_objectSpread({}, style), {}, {
+      flex: span
+    }),
     children: children
   });
 };
 
-export default Button;
+export default Col;

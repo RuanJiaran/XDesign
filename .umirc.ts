@@ -13,6 +13,7 @@ export default defineConfig({
   resolve: {
     includes: ['docs', 'src'],
   },
+  locales: [['zh-CN', '中文']],
   // theme: {
   //   // 配置 less 变量
   //   // '@theme': 'default', // 主题样式

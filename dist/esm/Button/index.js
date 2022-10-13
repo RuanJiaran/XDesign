@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import "./index.less";
 import { clsPrefix } from "../_config";
 import { jsx as _jsx } from "react/jsx-runtime";
+var classPrefix = "".concat(clsPrefix, "-btn");
 
 var Button = function Button(props) {
   var _classNames;
@@ -20,15 +21,17 @@ var Button = function Button(props) {
       disabled = props.disabled,
       block = props.block,
       className = props.className,
+      style = props.style,
       content = props.content,
       children = props.children,
       onClick = props.onClick;
-  var btnClasses = classNames("".concat(clsPrefix, "-btn"), (_classNames = {}, _defineProperty(_classNames, "".concat(clsPrefix, "-btn-type-").concat(type), type), _defineProperty(_classNames, "".concat(clsPrefix, "-btn-size-").concat(size), size), _defineProperty(_classNames, "".concat(clsPrefix, "-btn-variant-").concat(variant), variant), _defineProperty(_classNames, "".concat(clsPrefix, "-btn-block"), block), _classNames), className);
+  var btnClasses = classNames(classPrefix, (_classNames = {}, _defineProperty(_classNames, "".concat(classPrefix, "-type-").concat(type), true), _defineProperty(_classNames, "".concat(classPrefix, "-size-").concat(size), true), _defineProperty(_classNames, "".concat(classPrefix, "-variant-").concat(variant), variant), _defineProperty(_classNames, "".concat(classPrefix, "-block"), block), _classNames), className);
   return /*#__PURE__*/_jsx("button", {
     className: btnClasses,
     type: nativeType,
     disabled: disabled,
     onClick: onClick,
+    style: style,
     children: /*#__PURE__*/_jsx("span", {
       children: children || content
     })

@@ -1,2 +1,2 @@
-declare const clsPrefix = "x";
+declare const clsPrefix = "xd";
 export { clsPrefix };

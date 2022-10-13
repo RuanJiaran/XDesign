@@ -1,0 +1,94 @@
+@import '../_style/index.less';
+
+@row-prefix-cls: ~'@{cls-prefix}-row';
+@col-prefix-cls: ~'@{cls-prefix}-col';
+
+@span: ~'span';
+@span-num: 24;
+@offset: ~'offset';
+
+.@{row-prefix-cls}{
+  display: flex;
+  flex-wrap: wrap;
+  .@{col-prefix-cls}{
+    &-@{span}{
+      &-1{
+        flex: 1;
+      }
+    }
+    &-@{offset}{
+      &-1{
+        margin-left: calc(100%/24)
+      }
+      &-2{
+        margin-left: calc(200%/24)
+      }
+      &-3{
+        margin-left: calc(300%/24)
+      }
+      &-4{
+        margin-left: calc(400%/24)
+      }
+      &-5{
+        margin-left: calc(500%/24)
+      }
+      &-6{
+        margin-left: calc(600%/24)
+      }
+      &-7{
+        margin-left: calc(700%/24)
+      }
+      &-8{
+        margin-left: calc(800%/24)
+      }
+      &-9{
+        margin-left: calc(900%/24)
+      }
+      &-10{
+        margin-left: calc(100%/24)
+      }
+      &-11{
+        margin-left: calc(1100%/24)
+      }
+      &-12{
+        margin-left: calc(1200%/24)
+      }
+      &-13{
+        margin-left: calc(1300%/24)
+      }
+      &-14{
+        margin-left: calc(1400%/24)
+      }
+      &-15{
+        margin-left: calc(1500%/24)
+      }
+      &-16{
+        margin-left: calc(1600%/24)
+      }
+      &-17{
+        margin-left: calc(1700%/24)
+      }
+      &-18{
+        margin-left: calc(1800%/24)
+      }
+      &-19{
+        margin-left: calc(1900%/24)
+      }
+      &-20{
+        margin-left: calc(2000%/24)
+      }
+      &-21{
+        margin-left: calc(2100%/24)
+      }
+      &-22{
+        margin-left: calc(2200%/24)
+      }
+      &-23{
+        margin-left: calc(2300%/24)
+      }
+      &-24{
+        margin-left: calc(2400%/24)
+      }
+    }
+  }
+}

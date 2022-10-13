@@ -1,4 +1,3 @@
-declare const _default: ({ title }: {
-    title: string;
-}) => JSX.Element;
-export default _default;
+import Row from './Row';
+import Col from './Col';
+export { Row, Col };

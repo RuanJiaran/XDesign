@@ -16,8 +16,11 @@ declare type IProps = {
      */
     style?: React.CSSProperties;
     /**
+     * @description 类名
+     */
+    className?: string;
+    /**
      * @description 内容
-     * @default
      */
     children?: React.ReactNode;
 };

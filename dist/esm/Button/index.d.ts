@@ -54,6 +54,10 @@ export declare type IProps = {
      */
     className?: string;
     /**
+     * @description 样式
+     */
+    style?: React.CSSProperties;
+    /**
      * @description 点击事件，点击时触发
      */
     onClick?: (e: React.MouseEvent) => void;
