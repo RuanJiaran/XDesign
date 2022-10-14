@@ -4,8 +4,8 @@ import { clsPrefix } from './src/_config';
 export default defineConfig({
   title: 'Design',
   favicon: '/XDesign/favicon.png',
-  logo: '/logo.png',
-  base: '/XDesign/',
+  logo: '/XDesign/logo.png',
+  base: '/XDesign',
   publicPath: '/XDesign/',
   outputPath: 'docs-dist',
   mode: 'site',
