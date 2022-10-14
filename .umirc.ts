@@ -1,5 +1,5 @@
 import { defineConfig } from 'dumi';
-import { clsPrefix } from './src/_config';
+// import { clsPrefix } from './src/_config';
 
 export default defineConfig({
   title: 'Design',
