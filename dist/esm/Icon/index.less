@@ -1,0 +1,30 @@
+@import '../_style/index.less';
+
+@btn-prefix-cls: ~'@{cls-prefix}-icon';
+
+.@{btn-prefix-cls}{
+  display: inline-block;
+  &-spin{
+    animation: iconloading 1.5s linear infinite;
+    -ms-animation: iconloading 1.5s linear infinite;/* IE 9 */
+    -webkit-animation: iconloading 1.5s linear infinite; /* Safari and Chrome */
+  }
+}
+
+@keyframes iconloading {
+  0%{
+    transform: rotate(0);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

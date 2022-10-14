@@ -1,32 +1,17 @@
 import React from 'react';
-import classNames from 'classnames';
-import { clsPrefix } from '../_config';
 import './index.less';
+import { CompBaseProps } from '..';
+import useClassNames from '../_hooks/useClassNames';
 
-const classPrefix = `${clsPrefix}-row`;
+export type RowProps = CompBaseProps;
 
-type IProps = {
-  /**
-   * @description 类名
-   */
-  className: string;
-  /**
-   * @description 样式
-   */
-  style: React.CSSProperties;
-  /**
-   * @description 内容
-   */
-  children: React.ReactNode;
-};
-
-const Row: React.FC<IProps> = (props) => {
+const Row: React.FC<RowProps> = (props) => {
   const { children, style, className } = props;
 
-  const classes = classNames(classPrefix, className);
+  const { clsNames } = useClassNames('row', className);
 
   return (
-    <div className={classes} style={style}>
+    <div className={clsNames} style={style}>
       {children}
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.less';
-export declare type IProps = {
+import { CompBaseProps } from '../index';
+export declare type ButtonProps = {
     /**
      * @description 颜色类型，默认（default）、主色（primary）、浅灰（info）、红色（danger）、黄色（warning）、绿色（success）
      * @default     default
@@ -42,25 +43,9 @@ export declare type IProps = {
      */
     icon?: string;
     /**
-     * @description 按钮内容
-     */
-    content?: React.ReactNode;
-    /**
-     * @description 按钮内容，同 content
-     */
-    children?: React.ReactNode;
-    /**
-     * @description 类名
-     */
-    className?: string;
-    /**
-     * @description 样式
-     */
-    style?: React.CSSProperties;
-    /**
      * @description 点击事件，点击时触发
      */
     onClick?: (e: React.MouseEvent) => void;
-};
-declare const Button: React.FC<IProps>;
+} & CompBaseProps;
+declare const Button: React.FC<ButtonProps>;
 export default Button;

@@ -1,22 +1,15 @@
 import React from 'react';
 import './index.less';
-declare type IProps = {
+import { CompBaseProps } from '..';
+export declare type ColProps = {
     /**
      * @description 每行占用列数
      */
-    span: number;
+    span?: number;
     /**
      * @description 偏移指定列数
      */
-    offset: number;
-    /**
-     * @description 额外样式
-     */
-    style: React.CSSProperties;
-    /**
-     * @description 内容
-     */
-    children: React.ReactNode;
-};
-declare const Col: React.FC<IProps>;
+    offset?: number;
+} & CompBaseProps;
+declare const Col: React.FC<ColProps>;
 export default Col;

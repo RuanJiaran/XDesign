@@ -5,7 +5,6 @@ const Index = () => {
   return (
     <Space>
       <Button>默认按钮</Button>
-      <Button content="默认按钮" />
     </Space>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.less';
-declare type IProps = {
+import { CompBaseProps } from '..';
+declare type SpaceProps = {
     /**
      * @description 间距大小
      * @default     8
@@ -11,18 +12,6 @@ declare type IProps = {
      * @default     horizontal
      */
     direction?: 'vertical' | 'horizontal';
-    /**
-     * @description 样式
-     */
-    style?: React.CSSProperties;
-    /**
-     * @description 类名
-     */
-    className?: string;
-    /**
-     * @description 内容
-     */
-    children?: React.ReactNode;
-};
-declare const Button: React.FC<IProps>;
+} & CompBaseProps;
+declare const Button: React.FC<SpaceProps>;
 export default Button;

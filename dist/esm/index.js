@@ -10,4 +10,5 @@ import Slider from "./Slider";
 import Table from "./Table";
 import Textarea from "./Textarea";
 import Form from "./Form";
-export { Button, Space, Row, Col, Input, Checkbox, InputNumber, Radio, Select, Slider, Table, Textarea, Form };
+import Icon from "./Icon";
+export { Button, Space, Row, Col, Icon, Input, Checkbox, InputNumber, Radio, Select, Slider, Table, Textarea, Form };

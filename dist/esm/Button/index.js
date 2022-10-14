@@ -1,14 +1,12 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import React from 'react';
-import classNames from 'classnames';
 import "./index.less";
-import { clsPrefix } from "../_config";
+import useClassNames from "../_hooks/useClassNames";
 import { jsx as _jsx } from "react/jsx-runtime";
-var classPrefix = "".concat(clsPrefix, "-btn");
 
 var Button = function Button(props) {
-  var _classNames;
+  var _useClassNames2;
 
   var _props$type = props.type,
       type = _props$type === void 0 ? 'default' : _props$type,
@@ -22,18 +20,20 @@ var Button = function Button(props) {
       block = props.block,
       className = props.className,
       style = props.style,
-      content = props.content,
       children = props.children,
       onClick = props.onClick;
-  var btnClasses = classNames(classPrefix, (_classNames = {}, _defineProperty(_classNames, "".concat(classPrefix, "-type-").concat(type), true), _defineProperty(_classNames, "".concat(classPrefix, "-size-").concat(size), true), _defineProperty(_classNames, "".concat(classPrefix, "-variant-").concat(variant), variant), _defineProperty(_classNames, "".concat(classPrefix, "-block"), block), _classNames), className);
+
+  var _useClassNames = useClassNames('btn', className, (_useClassNames2 = {}, _defineProperty(_useClassNames2, "type-".concat(type), true), _defineProperty(_useClassNames2, "size-".concat(size), true), _defineProperty(_useClassNames2, "variant-".concat(variant), variant), _defineProperty(_useClassNames2, "block", block), _useClassNames2)),
+      clsNames = _useClassNames.clsNames;
+
   return /*#__PURE__*/_jsx("button", {
-    className: btnClasses,
+    className: clsNames,
     type: nativeType,
     disabled: disabled,
     onClick: onClick,
     style: style,
     children: /*#__PURE__*/_jsx("span", {
-      children: children || content
+      children: children
     })
   });
 };

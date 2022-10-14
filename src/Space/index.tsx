@@ -1,11 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
 import './index.less';
-import { clsPrefix } from '../_config';
+import { CompBaseProps } from '..';
+import useClassNames from '../_hooks/useClassNames';
 
-const classPrefix = `${clsPrefix}-space`;
-
-type IProps = {
+type SpaceProps = {
   /**
    * @description 间距大小
    * @default     8
@@ -16,33 +14,17 @@ type IProps = {
    * @default     horizontal
    */
   direction?: 'vertical' | 'horizontal';
-  /**
-   * @description 样式
-   */
-  style?: React.CSSProperties;
-  /**
-   * @description 类名
-   */
-  className?: string;
-  /**
-   * @description 内容
-   */
-  children?: React.ReactNode;
-};
+} & CompBaseProps;
 
-const Button: React.FC<IProps> = (props) => {
+const Button: React.FC<SpaceProps> = (props) => {
   const { size = 8, direction = 'horizontal', className, children, style } = props;
 
-  const spaceClsNames = classNames(
-    classPrefix,
-    {
-      [`${classPrefix}-direction-${direction}`]: true,
-    },
-    className,
-  );
+  const { clsNames } = useClassNames('space', className, {
+    [`direction-${direction}`]: true,
+  });
 
   return (
-    <div className={spaceClsNames} style={{ gap: size, ...style }}>
+    <div className={clsNames} style={{ gap: size, ...style }}>
       {children}
     </div>
   );

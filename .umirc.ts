@@ -2,10 +2,9 @@ import { defineConfig } from 'dumi';
 import { clsPrefix } from './src/_config';
 
 export default defineConfig({
-  title: 'XDesign',
-  favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  title: 'Design',
+  favicon: '/favicon.png',
+  logo: '/logo.png',
   base: '/XDesign',
   publicPath: '/XDesign/',
   outputPath: 'docs-dist',
@@ -51,7 +50,7 @@ export default defineConfig({
     '/components': [
       {
         title: '基础',
-        children: ['Button/index.md', 'Space/index.md'],
+        children: ['Button', 'Space', 'Icon'],
       },
       {
         title: '布局',

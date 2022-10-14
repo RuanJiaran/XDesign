@@ -1,39 +1,29 @@
 import React from 'react';
-import classNames from 'classnames';
-import { clsPrefix } from '../_config';
 import './index.less';
+import { CompBaseProps } from '..';
+import useClassNames from '../_hooks/useClassNames';
 
-const classPrefix = `${clsPrefix}-col`;
-
-type IProps = {
+export type ColProps = {
   /**
    * @description 每行占用列数
    */
-  span: number;
+  span?: number;
   /**
    * @description 偏移指定列数
    */
-  offset: number;
-  /**
-   * @description 额外样式
-   */
-  style: React.CSSProperties;
-  /**
-   * @description 内容
-   */
-  children: React.ReactNode;
-};
+  offset?: number;
+} & CompBaseProps;
 
-const Col: React.FC<IProps> = (props) => {
-  const { span = 24, offset, children, style } = props;
+const Col: React.FC<ColProps> = (props) => {
+  const { span = 24, offset, children, style, className } = props;
 
-  const classes = classNames(classPrefix, {
-    [`${classPrefix}-span-${span}`]: true,
-    [`${classPrefix}-offset-${offset}`]: offset,
+  const { clsNames } = useClassNames('col', className, {
+    [`span-${span}`]: true,
+    [`offset-${offset}`]: offset,
   });
 
   return (
-    <div className={classes} style={{ ...style, flex: span }}>
+    <div className={clsNames} style={{ ...style, flex: span }}>
       {children}
     </div>
   );

@@ -5,11 +5,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import React from 'react';
-import classNames from 'classnames';
 import "./index.less";
-import { clsPrefix } from "../_config";
+import useClassNames from "../_hooks/useClassNames";
 import { jsx as _jsx } from "react/jsx-runtime";
-var classPrefix = "".concat(clsPrefix, "-space");
 
 var Button = function Button(props) {
   var _props$size = props.size,
@@ -19,9 +17,12 @@ var Button = function Button(props) {
       className = props.className,
       children = props.children,
       style = props.style;
-  var spaceClsNames = classNames(classPrefix, _defineProperty({}, "".concat(classPrefix, "-direction-").concat(direction), true), className);
+
+  var _useClassNames = useClassNames('space', className, _defineProperty({}, "direction-".concat(direction), true)),
+      clsNames = _useClassNames.clsNames;
+
   return /*#__PURE__*/_jsx("div", {
-    className: spaceClsNames,
+    className: clsNames,
     style: _objectSpread({
       gap: size
     }, style),
