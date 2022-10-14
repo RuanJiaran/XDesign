@@ -10,5 +10,8 @@ import Slider from "./Slider";
 import Table from "./Table";
 import Textarea from "./Textarea";
 import Form from "./Form";
-import Icon from "./Icon";
+import Icon from "./Icon"; // 所有组件样式前缀
+
+export var clsPrefix = 'xd'; // 组件公共属性
+
 export { Button, Space, Row, Col, Icon, Input, Checkbox, InputNumber, Radio, Select, Slider, Table, Textarea, Form };

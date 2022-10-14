@@ -11,6 +11,7 @@ import Table from './Table';
 import Textarea from './Textarea';
 import Form from './Form';
 import Icon from './Icon';
+export declare const clsPrefix = "xd";
 export declare type CompBaseProps = {
     /**
      * @description 组件内容

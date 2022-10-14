@@ -12,6 +12,10 @@ import Textarea from './Textarea';
 import Form from './Form';
 import Icon from './Icon';
 
+// 所有组件样式前缀
+export const clsPrefix = 'xd';
+
+// 组件公共属性
 export type CompBaseProps = {
   /**
    * @description 组件内容

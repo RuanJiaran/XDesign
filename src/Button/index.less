@@ -10,13 +10,14 @@
 
 .@{btn-prefix-cls}{
   box-sizing: border-box;
-  border:1px solid @borderColor;
+  border:1px solid @componentBorderColor;
   background: @whiteColor;
-  color: @fontColor;
+  color: @fontColorPrimary;
   cursor: pointer;
   border-radius: 5px;
   &:hover{
-    opacity: .7;
+    opacity: .8;
+    transition: all .2s linear;
   }
   &[disabled]{
     cursor: not-allowed;
@@ -136,26 +137,31 @@
       }
     }
     &-info{
-      border-color: @infoColor;
-      background-color: @infoColor;
-      color: @whiteColor;
+      border-color: @componentBgColor;
+      background-color: @componentBgColor;
+      color: @fontColorPrimary;
       &.@{btn-prefix-cls}-@{variant}{
         &-dashed{
           background-color: @whiteColor;
-          color: @infoColor;
-          border-color: @infoColor;
+          color: @fontColorSecondary;
+          border-color: @componentBgColor;
           border-style: dashed;
         }
         &-outline{
           background-color: @whiteColor;
-          color: @infoColor;
-          border-color: @infoColor;
+          color: @fontColorSecondary;
+          border-color: @componentBgColor;
         }
         &-text{
           background-color: @whiteColor;
-          color: @infoColor;
+          color: @fontColorSecondary;
           border: none;
         }
+      }
+      &:hover{
+        opacity: 1;
+        background-color: @componentBgColorHover;
+        border-color: @componentBgColorHover;
       }
     }
   }

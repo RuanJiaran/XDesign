@@ -1,5 +1,5 @@
+import { clsPrefix } from '..';
 import classnames from 'classnames';
-import { clsPrefix } from '../_config';
 
 type ClsObjType = { [key: string]: string | number | boolean | undefined };
 

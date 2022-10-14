@@ -7,11 +7,35 @@ nav:
 
 ## Icon 图标
 
-控制组件之间的间距。
+提供了 200 多个常用的 icon 图标。
 
 ## 基本用法
 
-Icon 作为 UI 构成中重要的元素，一定程度上影响 UI 界面整体呈现出的风格。
+给 `Icon` 设置 `type` 属性为要展示的图标名称即可。
+
+```tsx | pure
+<Icon type="loading" />
+```
+
+```tsx
+import React from 'react';
+import { Icon, Space } from 'xdesign-ui';
+
+const Index = () => {
+  return (
+    <Space size={50}>
+      <Icon type="loading" spin={true} />
+      <Icon type="collection" color="#e34d59" />
+      <Icon type="settings" />
+      <Icon type="cancel" />
+    </Space>
+  );
+};
+
+export default Index;
+```
+
+## 全部图标
 
 <code src="./demo/index.tsx">
 

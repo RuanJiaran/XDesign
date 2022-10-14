@@ -1,5 +1,5 @@
+import { clsPrefix } from '..';
 import classnames from 'classnames';
-import { clsPrefix } from "../_config";
 
 /**
  * @description 组装组件的类名
