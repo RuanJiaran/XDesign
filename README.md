@@ -39,4 +39,6 @@ export default Index;
 
 更多使用示例请看 [组件文档](https://ruanjiaran.github.io/XDesign)
 
-作者：ruanjiaran<1606707347@qq.com>
+作者：ruanjiaran
+
+邮箱：<1606707347@qq.com>
