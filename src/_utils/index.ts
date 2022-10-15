@@ -1,11 +1,13 @@
+import React from 'react';
+
 /**
  * 复制文本
- * @param copyText 复制的文本内容
+ * @param copyContent 复制的文本内容
  */
-export const copy = (copyText: string) => {
+export const copy = (copyContent: string) => {
   const input = document.createElement('input');
   document.body.appendChild(input);
-  input.setAttribute('value', copyText);
+  input.setAttribute('value', copyContent);
   input.setAttribute('copycreate', 'yes');
   input.select();
   document.execCommand('Copy');

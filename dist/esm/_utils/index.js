@@ -1,11 +1,11 @@
 /**
  * 复制文本
- * @param copyText 复制的文本内容
+ * @param copyContent 复制的文本内容
  */
-export var copy = function copy(copyText) {
+export var copy = function copy(copyContent) {
   var input = document.createElement('input');
   document.body.appendChild(input);
-  input.setAttribute('value', copyText);
+  input.setAttribute('value', copyContent);
   input.setAttribute('copycreate', 'yes');
   input.select();
   document.execCommand('Copy'); // 复制完后将上面创建的 input 从 dom 中移除

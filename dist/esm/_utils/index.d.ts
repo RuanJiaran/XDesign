@@ -1,5 +1,5 @@
 /**
  * 复制文本
- * @param copyText 复制的文本内容
+ * @param copyContent 复制的文本内容
  */
-export declare const copy: (copyText: string) => void;
+export declare const copy: (copyContent: string) => void;

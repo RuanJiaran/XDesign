@@ -11,10 +11,10 @@ nav:
 
 ## 基本用法
 
-给 `Icon` 设置 `type` 属性为要展示的图标名称即可。
+给 `Icon` 的 `type` 属性设置为要展示的图标名称即可。
 
 ```tsx | pure
-<Icon type="loading" />
+<Icon type="Loading" />
 ```
 
 ```tsx
@@ -24,10 +24,7 @@ import { Icon, Space } from 'xdesign-ui';
 const Index = () => {
   return (
     <Space size={50}>
-      <Icon type="loading" spin={true} />
-      <Icon type="collection" color="#e34d59" />
-      <Icon type="settings" />
-      <Icon type="cancel" />
+      <Icon type="Loading" spin={true} />
     </Space>
   );
 };
