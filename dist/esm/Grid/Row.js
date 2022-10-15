@@ -1,6 +1,5 @@
 import React from 'react';
-import "./index.less";
-import useClassNames from "../_hooks/useClassNames";
+import { handlerClassNames } from "../_utils";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 var Row = function Row(props) {
@@ -8,11 +7,11 @@ var Row = function Row(props) {
       style = props.style,
       className = props.className;
 
-  var _useClassNames = useClassNames('row', className),
-      clsNames = _useClassNames.clsNames;
+  var _handlerClassNames = handlerClassNames('row', className),
+      classNames = _handlerClassNames.classNames;
 
   return /*#__PURE__*/_jsx("div", {
-    className: clsNames,
+    className: classNames,
     style: style,
     children: children
   });

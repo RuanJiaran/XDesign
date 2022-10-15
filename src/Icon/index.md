@@ -36,4 +36,4 @@ export default Index;
 
 <code src="./demo/index.tsx">
 
-<API></API>
+<API src="./Icon.tsx"></API>

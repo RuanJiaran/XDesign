@@ -1,33 +1,5 @@
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-import React from 'react';
-import "./index.less";
-import useClassNames from "../_hooks/useClassNames";
-import { jsx as _jsx } from "react/jsx-runtime";
-
-var Button = function Button(props) {
-  var _props$size = props.size,
-      size = _props$size === void 0 ? 8 : _props$size,
-      _props$direction = props.direction,
-      direction = _props$direction === void 0 ? 'horizontal' : _props$direction,
-      className = props.className,
-      children = props.children,
-      style = props.style;
-
-  var _useClassNames = useClassNames('space', className, _defineProperty({}, "direction-".concat(direction), true)),
-      clsNames = _useClassNames.clsNames;
-
-  return /*#__PURE__*/_jsx("div", {
-    className: clsNames,
-    style: _objectSpread({
-      gap: size
-    }, style),
-    children: children
-  });
-};
-
-export default Button;
+import _Space from "./Space";
+import "./style/index.less";
+export * from "./type";
+export var Space = _Space;
+export default Space;

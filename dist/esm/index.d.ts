@@ -1,17 +1,4 @@
-import Button, { ButtonProps } from './Button';
-import Space from './Space';
-import { Row, Col } from './Grid';
-import Input from './Input';
-import Checkbox from './Checkbox';
-import InputNumber from './InputNumber';
-import Radio from './Radio';
-import Select from './Select';
-import Slider from './Slider';
-import Table from './Table';
-import Textarea from './Textarea';
-import Form from './Form';
-import Icon from './Icon';
-export declare const clsPrefix = "xd";
+export declare const classPrefix = "xd";
 export declare type CompBaseProps = {
     /**
      * @description 组件内容
@@ -26,5 +13,7 @@ export declare type CompBaseProps = {
      */
     style?: React.CSSProperties;
 };
-export { Button, Space, Row, Col, Icon, Input, Checkbox, InputNumber, Radio, Select, Slider, Table, Textarea, Form, };
-export type { ButtonProps };
+export * from './Button';
+export * from './Icon';
+export * from './Space';
+export * from './Grid';

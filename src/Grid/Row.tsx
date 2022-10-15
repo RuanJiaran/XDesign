@@ -1,17 +1,14 @@
 import React from 'react';
-import './index.less';
-import { CompBaseProps } from '..';
-import useClassNames from '../_hooks/useClassNames';
-
-export type RowProps = CompBaseProps;
+import { handlerClassNames } from '../_utils';
+import { RowProps } from './type';
 
 const Row: React.FC<RowProps> = (props) => {
   const { children, style, className } = props;
 
-  const { clsNames } = useClassNames('row', className);
+  const { classNames } = handlerClassNames('row', className);
 
   return (
-    <div className={clsNames} style={style}>
+    <div className={classNames} style={style}>
       {children}
     </div>
   );

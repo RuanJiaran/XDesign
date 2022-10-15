@@ -1,17 +1,7 @@
-import Button from "./Button";
-import Space from "./Space";
-import { Row, Col } from "./Grid";
-import Input from "./Input";
-import Checkbox from "./Checkbox";
-import InputNumber from "./InputNumber";
-import Radio from "./Radio";
-import Select from "./Select";
-import Slider from "./Slider";
-import Table from "./Table";
-import Textarea from "./Textarea";
-import Form from "./Form";
-import Icon from "./Icon"; // 所有组件样式前缀
+// 所有组件样式前缀
+export var classPrefix = 'xd'; // 组件公共属性
 
-export var clsPrefix = 'xd'; // 组件公共属性
-
-export { Button, Space, Row, Col, Icon, Input, Checkbox, InputNumber, Radio, Select, Slider, Table, Textarea, Form };
+export * from "./Button";
+export * from "./Icon";
+export * from "./Space";
+export * from "./Grid";

@@ -1,31 +1,28 @@
 import React from 'react';
-import './index.less';
-import { CompBaseProps } from '..';
-import useClassNames from '../_hooks/useClassNames';
-
-export type ColProps = {
-  /**
-   * @description 每行占用列数
-   */
-  span?: number;
-  /**
-   * @description 偏移指定列数
-   */
-  offset?: number;
-} & CompBaseProps;
+import { handlerClassNames } from '../_utils';
+import { ColProps } from './type';
 
 const Col: React.FC<ColProps> = (props) => {
-  const { span = 24, offset, children, style, className } = props;
+  const { span, offset, children, style, className } = props;
 
-  const { clsNames } = useClassNames('col', className, {
-    [`span-${span}`]: true,
-    [`offset-${offset}`]: offset,
-  });
+  const { classNames } = handlerClassNames(
+    'col',
+    [`span-${span}`],
+    {
+      [`offset-${offset}`]: offset,
+    },
+    className,
+  );
 
   return (
-    <div className={clsNames} style={{ ...style, flex: span }}>
+    <div className={classNames} style={{ ...style, flex: span }}>
       {children}
     </div>
   );
 };
+
+Col.defaultProps = {
+  span: 24,
+};
+
 export default Col;

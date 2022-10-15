@@ -1,7 +1,3 @@
-import React from 'react';
-import './index.less';
-import useClassNames from '../_hooks/useClassNames';
-import { omit } from '../_utils';
 import { CompBaseProps } from '../index';
 
 export type ButtonProps = {
@@ -49,43 +45,5 @@ export type ButtonProps = {
   /**
    * @description 点击事件，点击时触发
    */
-  onClick?: (e: React.MouseEvent) => void;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 } & CompBaseProps;
-
-const Button: React.FC<ButtonProps> = (props) => {
-  const {
-    type = 'default',
-    size = 'middle',
-    nativeType = 'button',
-    variant = 'base',
-    // shape = 'rectangle',
-    disabled,
-    block,
-    className,
-    style,
-    children,
-    onClick,
-  } = props;
-
-  const { clsNames } = useClassNames('btn', className, {
-    [`type-${type}`]: true,
-    [`size-${size}`]: true,
-    [`variant-${variant}`]: variant,
-    block: block,
-    // [`${clsPrefix}-btn-shape`]: shape,
-  });
-
-  return (
-    <button
-      className={clsNames}
-      type={nativeType}
-      disabled={disabled}
-      onClick={onClick}
-      style={style}
-    >
-      <span>{children}</span>
-    </button>
-  );
-};
-
-export default Button;

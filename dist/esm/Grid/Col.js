@@ -5,25 +5,21 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import React from 'react';
-import "./index.less";
-import useClassNames from "../_hooks/useClassNames";
+import { handlerClassNames } from "../_utils";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 var Col = function Col(props) {
-  var _useClassNames2;
-
-  var _props$span = props.span,
-      span = _props$span === void 0 ? 24 : _props$span,
+  var span = props.span,
       offset = props.offset,
       children = props.children,
       style = props.style,
       className = props.className;
 
-  var _useClassNames = useClassNames('col', className, (_useClassNames2 = {}, _defineProperty(_useClassNames2, "span-".concat(span), true), _defineProperty(_useClassNames2, "offset-".concat(offset), offset), _useClassNames2)),
-      clsNames = _useClassNames.clsNames;
+  var _handlerClassNames = handlerClassNames('col', ["span-".concat(span)], _defineProperty({}, "offset-".concat(offset), offset), className),
+      classNames = _handlerClassNames.classNames;
 
   return /*#__PURE__*/_jsx("div", {
-    className: clsNames,
+    className: classNames,
     style: _objectSpread(_objectSpread({}, style), {}, {
       flex: span
     }),
@@ -31,4 +27,7 @@ var Col = function Col(props) {
   });
 };
 
+Col.defaultProps = {
+  span: 24
+};
 export default Col;
