@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.less';
 import useClassNames from '../_hooks/useClassNames';
+import { omit } from '../_utils';
 import { CompBaseProps } from '../index';
 
 export type ButtonProps = {

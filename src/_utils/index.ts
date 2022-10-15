@@ -1,10 +1,12 @@
-import React from 'react';
+type ObjPropsType = {
+  [key: string]: string | number | boolean | null | undefined;
+};
 
 /**
  * 复制文本
  * @param copyContent 复制的文本内容
  */
-export const copy = (copyContent: string) => {
+export function copy(copyContent: string) {
   const input = document.createElement('input');
   document.body.appendChild(input);
   input.setAttribute('value', copyContent);
@@ -18,4 +20,21 @@ export const copy = (copyContent: string) => {
     if (item.getAttribute('copycreate')) document.body.removeChild(item);
   });
   alert('复制成功');
-};
+}
+
+/**
+ * 过滤对象中不需要的属性
+ * @param obj
+ * @param fields
+ * @returns
+ */
+export function omit(obj: ObjPropsType, fields: string[]) {
+  const shallowCopy = {
+    ...obj,
+  };
+  for (let i = 0; i < fields.length; i++) {
+    const key = fields[i];
+    delete shallowCopy[key];
+  }
+  return shallowCopy;
+}
