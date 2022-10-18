@@ -5,7 +5,7 @@
 @alert-prefix: ~'@{prefix}-alert';
 @icon-prefix: ~'@{prefix}-icon';
 
-.xd-alert {
+.@{alert-prefix} {
   display: flex;
   box-sizing: border-box;
   padding: 14px 18px;
@@ -39,25 +39,25 @@
   }
   &-type-primary {
     background-color: @alert-primary-color;
-    .xd-icon {
+    .@{icon-prefix} {
       color: @alert-primary-icon-color;
     }
   }
   &-type-success {
     background-color: @alert-success-color;
-    .xd-icon {
+    .@{icon-prefix} {
       color: @alert-success-icon-color;
     }
   }
   &-type-warning {
     background-color: @alert-warning-color;
-    .xd-icon {
+    .@{icon-prefix} {
       color: @alert-warning-icon-color;
     }
   }
   &-type-error {
     background-color: @alert-error-color;
-    .xd-icon {
+    .@{icon-prefix} {
       color: @alert-error-icon-color;
     }
   }
