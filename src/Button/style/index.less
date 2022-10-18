@@ -3,8 +3,9 @@
 @import './mixin.less';
 
 @btn-prefix: ~'@{prefix}-btn';
+@icon-prefix: ~'@{prefix}-btn';
 
-.xd-btn {
+.@{btn-prefix} {
   .button;
   .button-size(@btn-height-default, @btn-font-default, @btn-icon-size-default, @btn-padding-horizontal-default);
 
@@ -74,7 +75,7 @@
     cursor: not-allowed;
     &.@{btn-prefix}-type-default {
       color: @text-color-disabled;
-      .xd-icon {
+      .@{icon-prefix}-icon {
         color: @text-color-disabled;
       }
     }
