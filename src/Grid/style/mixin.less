@@ -1,21 +1,21 @@
 @import './variables.less';
 
-// .for-offset(@total-span){
-//   .loop(@index:1) when (@index<=@total-span){
-//     &.@{prefix}-col-offset-@{index}{
-//       margin-left: 20%;
-//     }
-//     .loop(@index+1);
-//   }
-//   .loop();
-// }
+.for-offset(@total-span) {
+  .loop(@index:1) when (@index<=@total-span) {
+    &.@{prefix}-col-offset-@{index} {
+      margin-left: 20%;
+    }
+    .loop(@index+1);
+  }
+  .loop();
+}
 
-// .for-span(@total-span){
-//   .loop(@index:1) when (@index<=@total-span){
-//     &.@{prefix}-col-span-@{index}{
-//       flex: @index;
-//     }
-//     .loop(@index+1);
-//   }
-//   .loop();
-// }
+.for-span(@total-span) {
+  .loop(@index:1) when (@index<=@total-span) {
+    &.@{prefix}-col-span-@{index} {
+      flex: @index;
+    }
+    .loop(@index+1);
+  }
+  .loop();
+}
