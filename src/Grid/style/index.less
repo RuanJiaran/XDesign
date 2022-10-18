@@ -4,10 +4,10 @@
 @row-prefix: ~'@{prefix}-row';
 @col-prefix: ~'@{prefix}-col';
 
-.xd-row {
+.@{row-prefix} {
   display: flex;
   flex-wrap: wrap;
-  .xd-col {
+  .@{col-prefix} {
     .for-offset(@span-total-num);
     .for-span(@span-total-num);
   }
