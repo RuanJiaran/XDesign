@@ -1,0 +1,78 @@
+@import './variables.less';
+
+.button() {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: @btn-font-default;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: transparent;
+  border-style: solid;
+  border-width: @btn-border-width;
+  border-radius: @btn-border-radius;
+  outline: none;
+  cursor: pointer;
+  transition: all @anim-duration-base linear;
+  touch-action: manipulation;
+}
+
+.button-attr-color(@theme, @attr, @ghost: false) {
+  &:hover {
+    @{attr}: @@theme-hover;
+  }
+
+  &:active when (@ghost = true) {
+    @{attr}: @@theme-active;
+  }
+
+  // ghost disabled 强制统一色
+  &[disabled] when (@ghost = true) {
+    background-color: transparent;
+    @{attr}: @@theme-disabled;
+    .@{prefix}-icon {
+      color: @@theme-disabled;
+    }
+  }
+
+  &[disabled] when (@ghost = false) {
+    @{attr}: @@theme-disabled;
+  }
+
+  .@{prefix}-icon when (@ghost = false) {
+    color: white;
+  }
+  .@{prefix}-icon when (@theme = 'default') {
+    color: @btn-font-default-color;
+  }
+
+  .@{prefix}-icon when (@attr = color) {
+    @{attr}: @@theme-default;
+  }
+
+  @theme-default: e('btn-color-@{theme}');
+  @theme-hover: e('btn-color-@{theme}-hover');
+  @theme-active: e('btn-color-@{theme}-active');
+  @theme-disabled: e('btn-color-@{theme}-disabled');
+  @theme-focus: e('btn-color-@{theme}-focus');
+
+  @{attr}: @@theme-default;
+}
+
+.button-size(@btn-height, @btn-font-size, @btn-icon-size, @padding-horizontal) {
+  height: @btn-height;
+  padding-right: @padding-horizontal - @btn-border-width;
+  padding-left: @padding-horizontal - @btn-border-width;
+  font: @btn-font-size;
+
+  .@{prefix}-icon {
+    width: @btn-icon-size !important;
+    height: @btn-icon-size !important;
+    margin-right: 5px;
+    font-size: @btn-icon-size !important;
+    line-height: @btn-icon-size !important;
+  }
+}

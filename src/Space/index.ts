@@ -1,8 +1,6 @@
-import _Space from './Space';
 import './style/index.less';
+import Space from './Space';
 
 export * from './type';
 
-export const Space = _Space;
-
-export default Space;
+export { Space };

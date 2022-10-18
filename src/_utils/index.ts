@@ -51,25 +51,26 @@ export function omit(obj: ObjPropsType, fields: string[]) {
  * @returns
  */
 export function handlerClassNames(name: string, ...props: ClassNamesProps) {
-  const componentPrefix = `${classPrefix}-${name}`;
+  const compClassPrefix = `${classPrefix}-${name}`;
   props = props?.map((item) => {
     if (item instanceof Array) {
       // 将数组内的类名加上组件类名前缀
-      return item.map((name) => `${componentPrefix}-${name}`);
+      return item.map((name) => `${compClassPrefix}-${name}`);
     } else if (item instanceof Object) {
       const fixCls: ObjPropsType = {};
       for (const clsname in item) {
         // 将对象内的类名加上组件类名前缀
-        fixCls[`${componentPrefix}-${clsname}`] = item[clsname];
+        fixCls[`${compClassPrefix}-${clsname}`] = item[clsname];
       }
       return fixCls;
     }
     return item;
   });
 
-  const classNames = classnames(componentPrefix, props);
+  const classNames = classnames(compClassPrefix, props);
   return {
-    classPrefix,
     classNames,
+    classPrefix,
+    compClassPrefix,
   };
 }

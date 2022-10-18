@@ -4,7 +4,6 @@ import { SpaceProps } from './type';
 
 const Space: React.FC<SpaceProps> = (props) => {
   const { size, direction, className, children, style } = props;
-
   const { classNames } = handlerClassNames('space', [`direction-${direction}`], className);
 
   return (

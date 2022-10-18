@@ -9,7 +9,6 @@ const Index = () => {
       <Button type="success">success</Button>
       <Button type="danger">danger</Button>
       <Button type="warning">warning</Button>
-      <Button type="info">info</Button>
     </Space>
   );
 };

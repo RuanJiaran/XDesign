@@ -1,8 +1,6 @@
-import _Button from './Button';
 import './style/index.less';
+import Button from './Button';
 
 export * from './type';
 
-export const Button = _Button;
-
-export default Button;
+export { Button };

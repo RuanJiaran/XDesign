@@ -15,7 +15,7 @@ const Col: React.FC<ColProps> = (props) => {
   );
 
   return (
-    <div className={classNames} style={{ ...style, flex: span }}>
+    <div className={classNames} style={{ ...style }}>
       {children}
     </div>
   );

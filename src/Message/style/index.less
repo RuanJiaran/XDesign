@@ -1,0 +1,23 @@
+@import '../../_style/index.less';
+@import './variables.less';
+@import './mixin.less';
+
+@message-prefix: ~'@{prefix}-message';
+
+.xd-message {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  z-index: @z-index-message;
+  transform: translateX(-50%);
+  animation: messagefadein 0.5s;
+}
+
+@keyframes messagefadein {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50px;
+  }
+}

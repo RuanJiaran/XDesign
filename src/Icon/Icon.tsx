@@ -3,7 +3,7 @@ import { handlerClassNames } from '../_utils';
 import { IconProps } from './type';
 
 const Icon: React.FC<IconProps> = (props) => {
-  const { type, spin = false, size, color, style, className } = props;
+  const { type, spin, size, color, style, className } = props;
 
   const { classNames } = handlerClassNames(
     'icon',
@@ -25,6 +25,7 @@ const Icon: React.FC<IconProps> = (props) => {
 
 Icon.defaultProps = {
   size: 24,
+  spin: false,
 };
 
 export default Icon;

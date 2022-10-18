@@ -12,6 +12,10 @@ nav:
 
 ## 基础用法
 
+```tsx | pure
+<Button>默认按钮</Button>
+```
+
 <code src="./demo/index.tsx">
 
 ## 常用示例
@@ -41,5 +45,13 @@ nav:
 Block 按钮在宽度上充满其所在的父容器（无 padding 和 margin 值）。该按钮常见于移动端和一些表单场景中。
 
 <code src="./demo/block.tsx">
+
+## 加载按钮
+
+<code src="./demo/loading.tsx">
+
+## 自定义图标按钮
+
+<code src="./demo/icon.tsx">
 
 <API src="./Button.tsx"></API>

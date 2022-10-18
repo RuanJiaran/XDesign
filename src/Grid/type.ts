@@ -1,8 +1,6 @@
-import { CompBaseProps } from '..';
+import { ChildrenProps, StyleProps } from '../type';
 
-export type RowProps = CompBaseProps;
-
-export type ColProps = {
+export interface ColProps extends StyleProps, ChildrenProps {
   /**
    * @description 每行占用列数
    */
@@ -11,4 +9,12 @@ export type ColProps = {
    * @description 偏移指定列数
    */
   offset?: number;
-} & CompBaseProps;
+}
+
+export interface RowProps extends StyleProps, ChildrenProps {
+  /**
+   * @description 栅格间隔,[行间距，列间距]
+   * @default [8,0]
+   */
+  gutter?: number[];
+}

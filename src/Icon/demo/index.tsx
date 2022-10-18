@@ -7,7 +7,7 @@ const IconWrap = (props: { name: string; spin?: boolean }) => {
   const { name, spin = false } = props;
 
   let icon = '';
-  icon = spin ? `<Icon type='${name}' spin=${spin}/>` : `<Icon type='${name}'/>`;
+  icon = spin ? `<Icon type='${name}' spin={${spin}}/>` : `<Icon type='${name}'/>`;
 
   return (
     <>

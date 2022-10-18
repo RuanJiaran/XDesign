@@ -13,15 +13,6 @@ const Index = () => {
       <Button size="small" type="primary">
         小型按钮
       </Button>
-      <Button
-        size="mini"
-        type="primary"
-        onClick={(e) => {
-          console.log(e);
-        }}
-      >
-        超小按钮
-      </Button>
     </Space>
   );
 };

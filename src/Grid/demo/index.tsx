@@ -3,8 +3,8 @@ import { Row, Col } from 'xdesign-ui';
 
 const style: React.CSSProperties = {
   background: '#0052d9',
-  padding: '8px 0',
   color: 'white',
+  padding: '8px 0',
   textAlign: 'center',
 };
 
@@ -15,17 +15,13 @@ const style2: React.CSSProperties = {
   textAlign: 'center',
 };
 
-const rowstyle: React.CSSProperties = {
-  marginBottom: '8px',
-};
-
 const Index = () => {
   return (
     <>
-      <Row style={rowstyle}>
+      <Row>
         <Col style={style}>24</Col>
       </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={12} style={style}>
           12
         </Col>
@@ -33,7 +29,7 @@ const Index = () => {
           12
         </Col>
       </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={8} style={style}>
           8
         </Col>
@@ -44,7 +40,7 @@ const Index = () => {
           8
         </Col>
       </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={6} style={style}>
           6
         </Col>
@@ -58,7 +54,7 @@ const Index = () => {
           6
         </Col>
       </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={2} style={style}>
           2
         </Col>
@@ -72,7 +68,7 @@ const Index = () => {
           8
         </Col>
       </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={1} style={style}>
           1
         </Col>

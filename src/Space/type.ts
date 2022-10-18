@@ -1,14 +1,14 @@
-import { CompBaseProps } from '..';
+import { ChildrenProps, StyleProps } from '../type';
 
-export type SpaceProps = {
+export interface SpaceProps extends StyleProps, ChildrenProps {
   /**
    * @description 间距大小
    * @default     8
    */
   size?: number;
   /**
-   * @description 间距方向，横向（horizontal），垂直（vertical）
+   * @description 间距方向，行 | 列
    * @default     horizontal
    */
-  direction?: 'vertical' | 'horizontal';
-} & CompBaseProps;
+  direction?: 'horizontal' | 'vertical';
+}

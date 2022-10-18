@@ -18,29 +18,33 @@ const menus = {
     },
     {
       title: '布局',
-      children: ['Layout/index.md', 'Grid/index.md'],
+      children: ['Grid'],
     },
-    {
-      title: '输入',
-      children: [
-        'Input/index.md',
-        'InputNumber/index.md',
-        'Textarea/index.md',
-        'Checkbox/index.md',
-        'Select/index.md',
-        'Switch/index.md',
-        'Radio/index.md',
-        'Slider/index.md',
-        'Form/index.md',
-      ],
-    },
+    // {
+    //   title: '输入',
+    //   children: [
+    //     'Input',
+    //     'InputNumber',
+    //     'Textarea',
+    //     'Checkbox',
+    //     'Select',
+    //     'Switch',
+    //     'Radio',
+    //     'Slider',
+    //     'Form',
+    //   ],
+    // },
     {
       title: '数据展示',
-      children: ['Table/index.md'],
+      children: ['Table', 'Pagination'],
     },
     {
       title: '消息提醒',
-      children: [],
+      children: ['Alert', 'Message'],
+    },
+    {
+      title: '其它',
+      children: ['Example'],
     },
   ],
 };

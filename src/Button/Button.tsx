@@ -3,17 +3,29 @@ import { omit } from '../_utils';
 import { buttonDefaultProps } from './defaultProps';
 import { ButtonProps } from './type';
 import { handlerClassNames } from '../_utils';
+import { Icon } from '../Icon';
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { type, size, nativeType, variant, disabled, block, className, style, children, onClick } =
-    props;
+  const {
+    type,
+    size,
+    nativeType,
+    disabled,
+    ghost,
+    loading,
+    icon,
+    block,
+    className,
+    style,
+    onClick,
+  } = props;
 
   const { classNames } = handlerClassNames(
     'btn',
     [`type-${type}`, `size-${size}`],
     {
-      [`variant-${variant}`]: variant,
       block: block,
+      ghost: ghost,
     },
     className,
   );
@@ -26,7 +38,9 @@ const Button: React.FC<ButtonProps> = (props) => {
       onClick={onClick}
       style={style}
     >
-      <span>{children}</span>
+      {icon && icon}
+      {!icon && loading && <Icon type="loading5" spin={true} />}
+      <span>{props.children}</span>
     </button>
   );
 };

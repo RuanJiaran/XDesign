@@ -1,6 +1,6 @@
-import { CompBaseProps } from '..';
+import { StyleProps } from '../type';
 
-export type IconProps = {
+export interface IconProps extends StyleProps {
   /**
    * @description 图标类型
    */
@@ -19,4 +19,4 @@ export type IconProps = {
    * @default     false
    */
   spin?: boolean;
-} & CompBaseProps;
+}

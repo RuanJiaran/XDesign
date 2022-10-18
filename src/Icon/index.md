@@ -9,7 +9,7 @@ nav:
 
 提供了 200 多个常用的 icon 图标。
 
-## 基本用法
+## 基础用法
 
 给 `Icon` 的 `type` 属性设置为要展示的图标名称即可。
 
@@ -25,6 +25,7 @@ const Index = () => {
   return (
     <Space size={50}>
       <Icon type="Loading" spin={true} />
+      <Icon type="Loading" spin={true} size={36} color="#b11f26" />
     </Space>
   );
 };

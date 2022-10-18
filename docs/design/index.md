@@ -283,7 +283,7 @@ XDesign 主要颜色包括主题色，错误色，告警色，成功色，中性
         L32</span><span>#4b4b4b</span>
       </p>
     </div>
-    <div class="xdesign-color-features-list" style="background: rgb(56, 56, 56);">
+    <!-- <div class="xdesign-color-features-list" style="background: rgb(56, 56, 56);">
       <p class="xdesign-color-features-topTxt">
       <span>Gray11
         L24</span><span>#383838</span>
@@ -306,7 +306,7 @@ XDesign 主要颜色包括主题色，错误色，告警色，成功色，中性
       <span>Gray14
         L8</span><span>#181818</span>
       </p>
-    </div>
+    </div> -->
   </div>
 </div>
 

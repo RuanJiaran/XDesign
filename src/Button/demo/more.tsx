@@ -9,65 +9,23 @@ const Index = () => {
         <Button type="danger">填充按钮</Button>
         <Button type="warning">填充按钮</Button>
         <Button type="success">填充按钮</Button>
-        <Button type="info">填充按钮</Button>
         <Button type="default">填充按钮</Button>
       </Space>
       <Space>
-        <Button type="primary" variant="outline">
+        <Button type="primary" ghost={true}>
           边框按钮
         </Button>
-        <Button type="danger" variant="outline">
+        <Button type="danger" ghost={true}>
           边框按钮
         </Button>
-        <Button type="warning" variant="outline">
+        <Button type="warning" ghost={true}>
           边框按钮
         </Button>
-        <Button type="success" variant="outline">
+        <Button type="success" ghost={true}>
           边框按钮
         </Button>
-        <Button type="info" variant="outline">
+        <Button type="default" ghost={true}>
           边框按钮
-        </Button>
-        <Button type="default" variant="outline">
-          边框按钮
-        </Button>
-      </Space>
-      <Space>
-        <Button type="primary" variant="dashed">
-          虚框按钮
-        </Button>
-        <Button type="danger" variant="dashed">
-          虚框按钮
-        </Button>
-        <Button type="warning" variant="dashed">
-          虚框按钮
-        </Button>
-        <Button type="success" variant="dashed">
-          虚框按钮
-        </Button>
-        <Button type="info" variant="dashed">
-          虚框按钮
-        </Button>
-        <Button type="default">虚框按钮</Button>
-      </Space>
-      <Space>
-        <Button type="primary" variant="text">
-          文本按钮
-        </Button>
-        <Button type="danger" variant="text">
-          文本按钮
-        </Button>
-        <Button type="warning" variant="text">
-          文本按钮
-        </Button>
-        <Button type="success" variant="text">
-          文本按钮
-        </Button>
-        <Button type="info" variant="text">
-          文本按钮
-        </Button>
-        <Button type="default" variant="text">
-          文本按钮
         </Button>
       </Space>
     </Space>

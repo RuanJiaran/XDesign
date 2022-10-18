@@ -1,25 +1,152 @@
-@import '../color/colors.less';
+:root {
+  --xd-primary-color-1: var(--xd-cyan-color-1);
+  --xd-primary-color-2: var(--xd-cyan-color-2);
+  --xd-primary-color-3: var(--xd-cyan-color-3);
+  --xd-primary-color-4: var(--xd-cyan-color-4);
+  --xd-primary-color-5: var(--xd-cyan-color-5);
+  --xd-primary-color-6: var(--xd-cyan-color-6);
+  --xd-primary-color-7: var(--xd-cyan-color-7);
+  --xd-primary-color-8: var(--xd-cyan-color-8);
+  --xd-primary-color-9: var(--xd-cyan-color-9);
+  --xd-primary-color-10: var(--xd-cyan-color-10);
+  --xd-warning-color-1: var(--xd-orange-color-1);
+  --xd-warning-color-2: var(--xd-orange-color-2);
+  --xd-warning-color-3: var(--xd-orange-color-3);
+  --xd-warning-color-4: var(--xd-orange-color-4);
+  --xd-warning-color-5: var(--xd-orange-color-5);
+  --xd-warning-color-6: var(--xd-orange-color-6);
+  --xd-warning-color-7: var(--xd-orange-color-7);
+  --xd-warning-color-8: var(--xd-orange-color-8);
+  --xd-warning-color-9: var(--xd-orange-color-9);
+  --xd-warning-color-10: var(--xd-orange-color-10);
+  --xd-error-color-1: var(--xd-red-color-1);
+  --xd-error-color-2: var(--xd-red-color-2);
+  --xd-error-color-3: var(--xd-red-color-3);
+  --xd-error-color-4: var(--xd-red-color-4);
+  --xd-error-color-5: var(--xd-red-color-5);
+  --xd-error-color-6: var(--xd-red-color-6);
+  --xd-error-color-7: var(--xd-red-color-7);
+  --xd-error-color-8: var(--xd-red-color-8);
+  --xd-error-color-9: var(--xd-red-color-9);
+  --xd-error-color-10: var(--xd-red-color-10);
+  --xd-success-color-1: var(--xd-green-color-1);
+  --xd-success-color-2: var(--xd-green-color-2);
+  --xd-success-color-3: var(--xd-green-color-3);
+  --xd-success-color-4: var(--xd-green-color-4);
+  --xd-success-color-5: var(--xd-green-color-5);
+  --xd-success-color-6: var(--xd-green-color-6);
+  --xd-success-color-7: var(--xd-green-color-7);
+  --xd-success-color-8: var(--xd-green-color-8);
+  --xd-success-color-9: var(--xd-green-color-9);
+  --xd-success-color-10: var(--xd-green-color-10);
 
-@whiteColor: white;
-// 主题色
-@primaryColor: @primary-base;
-// 成功色
-@successColor: @green-base;
-// 错误色
-@dangerColor: @red-base;
-// 告警色
-@warningColor: @orange-base;
+  // 基础颜色
+  --xd-primary-color: var(--xd-primary-color-6); // 主题色
+  --xd-default-color: var(--xd-gray-color-3); // 默认色
+  --xd-warning-color: var(--xd-warning-color-5); // 警告色
+  --xd-error-color: var(--xd-error-color-6); //    失败色
+  --xd-success-color: var(--xd-success-color-5); // 成功色
 
-// 字体颜色
-@fontColorPrimary: @gray-12; //文本主要颜色
-@fontColorSecondary: rgba(0, 0, 0, 0.6); // 文本次要颜色
-@fontColorPlaceholder: rgba(0, 0, 0, 0.4); // 文本placeholder颜色
-@fontColorDisabled: rgba(0, 0, 0, 0.26); // 文本禁用颜色
-@fontColorLink: @primary-base; // 文本链接颜色
+  // 主题色的扩展 用于 hover / 聚焦 / 禁用 / 点击 等状态
+  --xd-primary-color-hover: var(--xd-primary-color-7); // hover态
+  --xd-primary-color-focus: var(--xd-primary-color-2); // focus态，包括鼠标和键盘
+  --xd-primary-color-active: var(--xd-primary-color-9); // 点击态
+  --xd-primary-color-disabled: var(--xd-primary-color-3); // 禁用态
+  --xd-primary-color-light: var(--xd-primary-color-1); // 浅色的选中态
 
-// 组件颜色
-@componentBorderColor: @gray-4; // 组件边框颜色
-@componentBgColor: @gray-3; // 组件背景色
-@componentBgColorHover: @gray-4;
-@componentBgColorActive: @gray-6;
-@componentBgColorDisabled: @gray-2;
+  // 默认色扩展
+  --xd-default-color-hover: var(--xd-gray-color-4);
+  --xd-default-color-focus: var(--xd-gray-color-2);
+  --xd-default-color-active: var(--xd-gray-color-6);
+  --xd-default-color-disabled: var(--xd-gray-color-3);
+  --xd-default-color-light: var(--xd-gray-color-1);
+
+  // 警告色扩展
+  --xd-warning-color-hover: var(--xd-warning-color-4);
+  --xd-warning-color-focus: var(--xd-warning-color-2);
+  --xd-warning-color-active: var(--xd-warning-color-6);
+  --xd-warning-color-disabled: var(--xd-warning-color-3);
+  --xd-warning-color-light: var(--xd-warning-color-1);
+
+  // 失败/错误色扩展
+  --xd-error-color-hover: var(--xd-error-color-5);
+  --xd-error-color-focus: var(--xd-error-color-2);
+  --xd-error-color-active: var(--xd-error-color-7);
+  --xd-error-color-disabled: var(--xd-error-color-3);
+  --xd-error-color-light: var(--xd-error-color-1);
+
+  // 成功色扩展
+  --xd-success-color-hover: var(--xd-success-color-4);
+  --xd-success-color-focus: var(--xd-success-color-2);
+  --xd-success-color-active: var(--xd-success-color-6);
+  --xd-success-color-disabled: var(--xd-success-color-3);
+  --xd-success-color-light: var(--xd-success-color-1);
+
+  // 文字 & 图标 颜色
+  --xd-font-white-1: rgba(255, 255, 255, 100%);
+  --xd-font-white-2: rgba(255, 255, 255, 55%);
+  --xd-font-white-3: rgba(255, 255, 255, 35%);
+  --xd-font-white-4: rgba(255, 255, 255, 22%);
+  --xd-font-gray-1: rgba(0, 0, 0, 75%);
+  --xd-font-gray-2: rgba(0, 0, 0, 60%);
+  --xd-font-gray-3: rgba(0, 0, 0, 40%);
+  --xd-font-gray-4: rgba(0, 0, 0, 26%);
+
+  // 文本颜色
+  --xd-text-color-primary: var(--xd-font-gray-1); // 色彩-文字-主要
+  --xd-text-color-secondary: var(--xd-font-gray-2); // 色彩-文字-次要
+  --xd-text-color-placeholder: var(--xd-font-gray-3); // 色彩-文字-占位符/说明
+  --xd-text-color-disabled: var(--xd-font-gray-4); // 色彩-文字-禁用
+  --xd-text-color-anti: #fff; // 色彩-文字-反色
+  --xd-text-color-link: var(--xd-primary-color-8); // 色彩-文字-链接
+
+  // 遮罩
+  --xd-mask-active: rgba(0, 0, 0, 60%); // 遮罩-弹出
+  --xd-mask-disabled: rgba(255, 255, 255, 60%); // 遮罩-禁用
+
+  // 背景色
+  --xd-bg-color-page: var(--xd-gray-color-2); // 色彩 - page
+  --xd-bg-color-container: #fff; // 色彩 - 容器
+  --xd-bg-color-container-hover: var(--xd-gray-color-1); // 色彩 - 容器 - hover
+  --xd-bg-color-container-active: var(--xd-gray-color-3); // 色彩 - 容器 - active
+  --xd-bg-color-container-select: #fff; // 色彩 - 容器 - select
+
+  --xd-bg-color-secondarycontainer: var(--xd-gray-color-1); // 色彩 - 次级容器
+  --xd-bg-color-secondarycontainer-hover: var(--xd-gray-color-2); // 色彩 - 次级容器 - hover
+  --xd-bg-color-secondarycontainer-active: var(--xd-gray-color-4); // 色彩 - 次级容器 - active
+
+  --xd-bg-color-component: var(--xd-gray-color-3); // 色彩 - 组件
+  --xd-bg-color-component-hover: var(--xd-gray-color-4); // 色彩 - 组件 - hover
+  --xd-bg-color-component-active: var(--xd-gray-color-6); // 色彩 - 组件 - active
+  --xd-bg-color-component-disabled: var(--xd-gray-color-2); // 色彩 - 组件 - disabled
+
+  // 边框
+  --xd-border-color: var(--xd-gray-color-4);
+  --xd-component-border-color: var(--xd-gray-color-4);
+
+  // 基础/下层 投影 hover 使用的组件包括：表格 /
+  --xd-shadow-1: 0 1px 10px rgba(0, 0, 0, 5%), 0 4px 5px rgba(0, 0, 0, 8%),
+    0 2px 4px -1px rgba(0, 0, 0, 12%);
+  // 中层投影 下拉 使用的组件包括：下拉菜单 / 气泡确认框 / 选择器 /
+  --xd-shadow-2: 0 3px 14px 2px rgba(0, 0, 0, 5%), 0 8px 10px 1px rgba(0, 0, 0, 6%),
+    0 5px 5px -3px rgba(0, 0, 0, 10%);
+  // 上层投影（警示/弹窗）使用的组件包括：全局提示 / 消息通知
+  --xd-shadow-3: 0 6px 30px 5px rgba(0, 0, 0, 5%), 0 16px 24px 2px rgba(0, 0, 0, 4%),
+    0 8px 10px -5px rgba(0, 0, 0, 8%);
+
+  // 内投影 用于弹窗类组件（气泡确认框 / 全局提示 / 消息通知）的内描边
+  --xd-shadow-inset-top: inset 0 0.5px 0 #dcdcdc;
+  --xd-shadow-inset-right: inset 0.5px 0 0 #dcdcdc;
+  --xd-shadow-inset-bottom: inset 0 -0.5px 0 #dcdcdc;
+  --xd-shadow-inset-left: inset -0.5px 0 0 #dcdcdc;
+
+  // table 特定阴影
+  --xd-table-shadow-color: rgba(0, 0, 0, 8%);
+
+  // 滚动条颜色
+  --xd-scrollbar-color: rgba(0, 0, 0, 10%);
+  // 滚动条悬浮颜色（ hover ）
+  --xd-scrollbar-hover-color: rgba(0, 0, 0, 30%);
+  // 滚动条轨道颜色，不能是带透明度，否则纵向滚动时，横向滚动条会穿透
+  --xd-scroll-track-color: #fff;
+}

@@ -15,22 +15,10 @@ const style2: React.CSSProperties = {
   textAlign: 'center',
 };
 
-const rowstyle: React.CSSProperties = {
-  marginBottom: '8px',
-};
-
 const Index = () => {
   return (
     <>
-      <Row style={rowstyle}>
-        <Col span={11} style={style}>
-          11
-        </Col>
-        <Col span={11} offset={2} style={style}>
-          11
-        </Col>
-      </Row>
-      <Row style={rowstyle}>
+      <Row>
         <Col span={2} style={style}>
           2
         </Col>
