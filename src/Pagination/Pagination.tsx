@@ -27,6 +27,7 @@ const Pagination: React.FC<PaginationProps> = (props) => {
 
   return (
     <div className={classNames} style={style}>
+      <div>共 {total} 条数据</div>
       <Space>
         <Button ghost={true} size={size} onClick={() => setCurrentPage(currentPage - 1)}>
           {'<'}
