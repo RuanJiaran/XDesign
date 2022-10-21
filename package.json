@@ -10,7 +10,12 @@
     "ts",
     "react",
     "react-ui",
-    "react-ts-ui"
+    "react-ts-ui",
+    "component",
+    "components",
+    "react-component",
+    "react-component-ui",
+    "ui"
   ],
   "description": "一套专为 React 开发，适合开发者使用的轻量级 UI 组件库",
   "homepage": "https://ruanjiaran.github.io/XDesign",

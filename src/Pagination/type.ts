@@ -16,11 +16,6 @@ export interface PaginationProps extends StyleProps {
    */
   pageSize?: number;
   /**
-   * @description 是否需要border
-   * @default true
-   */
-  border?: boolean;
-  /**
    * @description 按钮大小
    * @default "middle"
    */
